@@ -24,9 +24,11 @@ struct TaskListView: View {
       ForEach(self.userData.tasks.identified(by: \.self)) { task in
         HStack {
           if self.isEditing {
-            Button(action: { self.delete(task: task) }) {
-              Image(systemName: "minus.circle").foregroundColor(.red)
-            }
+            Image(systemName: "minus.circle")
+              .foregroundColor(.red)
+              .tapAction(count: 1) {
+                self.delete(task: task)
+              }
           }
           Button(action: { self.toggleDone(of: task) }) {
             Text(task.title)
