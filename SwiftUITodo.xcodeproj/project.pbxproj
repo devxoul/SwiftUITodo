@@ -16,6 +16,7 @@
 		031596C222A5BDE8001BBA1B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596C122A5BDE8001BBA1B /* Task.swift */; };
 		031596C822A5C661001BBA1B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596C722A5C661001BBA1B /* UserData.swift */; };
 		031596CA22A5DDE0001BBA1B /* TaskEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596C922A5DDE0001BBA1B /* TaskEditView.swift */; };
+		031596CC22A5F360001BBA1B /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596CB22A5F360001BBA1B /* TaskItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		031596C122A5BDE8001BBA1B /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		031596C722A5C661001BBA1B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		031596C922A5DDE0001BBA1B /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditView.swift; sourceTree = "<group>"; };
+		031596CB22A5F360001BBA1B /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				031596C722A5C661001BBA1B /* UserData.swift */,
 				031596C122A5BDE8001BBA1B /* Task.swift */,
 				031596B122A5BDBA001BBA1B /* TaskListView.swift */,
+				031596CB22A5F360001BBA1B /* TaskItemView.swift */,
 				031596C922A5DDE0001BBA1B /* TaskEditView.swift */,
 				031596B322A5BDBB001BBA1B /* Assets.xcassets */,
 				031596B822A5BDBB001BBA1B /* LaunchScreen.storyboard */,
@@ -158,6 +161,7 @@
 				031596C222A5BDE8001BBA1B /* Task.swift in Sources */,
 				031596AE22A5BDBA001BBA1B /* AppDelegate.swift in Sources */,
 				031596C822A5C661001BBA1B /* UserData.swift in Sources */,
+				031596CC22A5F360001BBA1B /* TaskItemView.swift in Sources */,
 				031596CA22A5DDE0001BBA1B /* TaskEditView.swift in Sources */,
 				031596B022A5BDBA001BBA1B /* SceneDelegate.swift in Sources */,
 				031596B222A5BDBA001BBA1B /* TaskListView.swift in Sources */,

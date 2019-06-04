@@ -22,26 +22,7 @@ struct TaskListView: View {
       }
 
       ForEach(self.userData.tasks.identified(by: \.self)) { task in
-        HStack {
-          if self.isEditing {
-            Image(systemName: "minus.circle")
-              .foregroundColor(.red)
-              .tapAction(count: 1) {
-                self.delete(task: task)
-              }
-            NavigationButton(destination: TaskEditView(task: task).environmentObject(self.userData)) {
-              Text(task.title).tag(task.title)
-            }
-          } else {
-            Button(action: { self.toggleDone(of: task) }) {
-              Text(task.title).tag(task.title)
-            }
-            Spacer()
-            if task.isDone {
-              Image(systemName: "checkmark").foregroundColor(.green)
-            }
-          }
-        }
+        TaskItemView(task: task, isEditing: self.$isEditing)
       }
     }
     .navigationBarItem(title: Text("Tasks"))
@@ -58,18 +39,5 @@ struct TaskListView: View {
     let newTask = Task(title: self.draftTitle, isDone: false)
     self.userData.tasks.insert(newTask, at: 0)
     self.draftTitle = ""
-  }
-
-  private func toggleDone(of task: Task) {
-    guard !self.isEditing else { return }
-    guard let index = self.userData.tasks.firstIndex(where: { $0.id == task.id }) else { return }
-    self.userData.tasks[index].isDone.toggle()
-  }
-
-  private func delete(task: Task) {
-    self.userData.tasks.removeAll(where: { $0.id == task.id })
-    if self.userData.tasks.isEmpty {
-      self.isEditing = false
-    }
   }
 }
