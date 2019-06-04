@@ -29,13 +29,17 @@ struct TaskListView: View {
               .tapAction(count: 1) {
                 self.delete(task: task)
               }
-          }
-          Button(action: { self.toggleDone(of: task) }) {
-            Text(task.title)
-          }
-          Spacer()
-          if task.isDone {
-            Image(systemName: "checkmark").foregroundColor(.green)
+            NavigationButton(destination: TaskEditView(task: task).environmentObject(self.userData)) {
+              Text(task.title).tag(task.title)
+            }
+          } else {
+            Button(action: { self.toggleDone(of: task) }) {
+              Text(task.title).tag(task.title)
+            }
+            Spacer()
+            if task.isDone {
+              Image(systemName: "checkmark").foregroundColor(.green)
+            }
           }
         }
       }
