@@ -25,7 +25,7 @@ struct TaskListView: View {
       if !self.isEditing {
         Text("Edit")
       } else {
-        Text("Done")
+        Text("Done").bold()
       }
     })
   }
