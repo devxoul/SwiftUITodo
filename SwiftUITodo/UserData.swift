@@ -10,8 +10,8 @@ import Combine
 import SwiftUI
 
 private let defaultTasks: [Task] = [
-  Task(title: "Read SwiftUI Documentation", isDone: false),
-  Task(title: "Watch WWDC19 Keynote", isDone: true),
+  Task(title: "Read SwiftUI Documentation 📚", isDone: false),
+  Task(title: "Watch WWDC19 Keynote 🎉", isDone: true),
 ]
 
 final class UserData: BindableObject {
