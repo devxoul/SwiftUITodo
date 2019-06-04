@@ -21,7 +21,7 @@ struct TaskListView: View {
         }
       }
 
-      ForEach(self.userData.tasks.identified(by: \.self)) { task in
+      ForEach(self.userData.tasks) { task in
         TaskItemView(task: task, isEditing: self.$isEditing)
       }
     }
