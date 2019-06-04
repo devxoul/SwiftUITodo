@@ -23,11 +23,11 @@ struct TaskItemView: View {
             self.delete()
           }
         NavigationButton(destination: TaskEditView(task: task).environmentObject(self.userData)) {
-          Text(task.title).tag(task.title)
+          Text(task.title)
         }
       } else {
         Button(action: { self.toggleDone() }) {
-          Text(self.task.title).tag(task.title)
+          Text(self.task.title)
         }
         Spacer()
         if task.isDone {
