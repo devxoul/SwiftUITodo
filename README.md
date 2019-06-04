@@ -11,4 +11,4 @@ SwiftUITodo is an example to-do list application using [SwiftUI](https://develop
 
 ## License
 
-URLNavigator is under MIT license. See the [LICENSE](LICENSE) file for more info.
+SwiftUITodo is under MIT license. See the [LICENSE](LICENSE) file for more info.
