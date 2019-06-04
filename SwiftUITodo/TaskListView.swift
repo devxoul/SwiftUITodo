@@ -16,9 +16,7 @@ struct TaskListView: View {
   var body: some View {
     List {
       if !self.isEditing {
-        HStack {
-          TextField($draftTitle, placeholder: Text("Create a New Task..."), onCommit: self.createTask)
-        }
+        TextField($draftTitle, placeholder: Text("Create a New Task..."), onCommit: self.createTask)
       }
 
       ForEach(self.userData.tasks) { task in
