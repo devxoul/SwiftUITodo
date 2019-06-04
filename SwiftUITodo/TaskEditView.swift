@@ -42,7 +42,7 @@ struct TaskEditView: View {
 
       Spacer()
     }
-    .navigationBarTitle(Text("Edit Task"))
+    .navigationBarTitle(Text("Edit Task 📝"))
   }
 
   private func updateTask() {
