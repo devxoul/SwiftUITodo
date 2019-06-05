@@ -8,8 +8,14 @@
 
 import SwiftUI
 
-struct Task: Equatable, Hashable {
-  let id: UUID = UUID()
+struct Task: Equatable, Hashable, Codable {
+  let id: UUID
   var title: String
   var isDone: Bool
+
+  init(title: String, isDone: Bool) {
+    self.id = UUID()
+    self.title = title
+    self.isDone = isDone
+  }
 }
