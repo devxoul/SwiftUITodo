@@ -20,7 +20,7 @@ struct TaskListView: View {
         TaskItemView(task: task, isEditing: self.$isEditing)
       }
     }
-    .navigationBarItem(title: Text("Tasks 👀"))
+    .navigationBarTitle(Text("Tasks 👀"))
     .navigationBarItems(trailing: Button(action: { self.isEditing.toggle() }) {
       if !self.isEditing {
         Text("Edit")
