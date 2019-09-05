@@ -6,7 +6,7 @@ SwiftUITodo is an example to-do list application using [SwiftUI](https://develop
 
 ## Requirements
 
-* Xcode 11 Beta
+* Xcode 11 Beta 6
 * Swift 5.1
 
 ## License
