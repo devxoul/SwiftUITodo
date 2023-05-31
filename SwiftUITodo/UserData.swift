@@ -9,18 +9,13 @@
 import Combine
 import SwiftUI
 
-private let defaultTasks: [Task] = [
-  Task(title: "Read SwiftUI Documentation 📚", isDone: false),
-  Task(title: "Watch WWDC19 Keynote 🎉", isDone: true),
-]
-
-final class UserData: BindableObject {
-  let didChange = PassthroughSubject<UserData, Never>()
-
-  @UserDefaultValue(key: "Tasks", defaultValue: defaultTasks)
-  var tasks: [Task] {
-    didSet {
-      didChange.send(self)
+final class UserData: ObservableObject {
+    
+    @AppStorage("Tasks")
+    var storage: Tasks = .default
+    
+    var tasks: [Task] {
+        get { storage.tasks }
+        set { storage.tasks = newValue }
     }
-  }
 }

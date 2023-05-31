@@ -8,13 +8,18 @@
 
 import Foundation
 
-@propertyDelegate
-struct UserDefaultValue<Value: Codable> {
-
+@propertyWrapper
+class UserDefaultValue<Value: Codable>: ObservableObject {
+    
     let key: String
     let defaultValue: Value
-
-    var value: Value {
+    
+    init(wrappedValue: Value, key: String) {
+        self.key = key
+        self.defaultValue = wrappedValue
+    }
+    
+    var wrappedValue: Value {
         get {
             let data = UserDefaults.standard.data(forKey: key)
             let value = data.flatMap { try? JSONDecoder().decode(Value.self, from: $0) }

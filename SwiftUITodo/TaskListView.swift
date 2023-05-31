@@ -9,30 +9,37 @@
 import SwiftUI
 
 struct TaskListView: View {
-  @EnvironmentObject var userData: UserData
-  @State var draftTitle: String = ""
-  @State var isEditing: Bool = false
-
-  var body: some View {
-    List {
-      TextField($draftTitle, placeholder: Text("Create a New Task..."), onCommit: self.createTask)
-      ForEach(self.userData.tasks) { task in
-        TaskItemView(task: task, isEditing: self.$isEditing)
-      }
+    @ObservedObject var userData: UserData
+    @State var draftTitle: String = ""
+    
+    var body: some View {
+        List {
+            TextField("Create a New Task...", text: $draftTitle)
+                .onSubmit {
+                    createTask()
+                }
+            ForEach(self.$userData.tasks) { $task in
+                TaskItemView(task: $task)
+            }
+            .onDelete { offsets in
+                userData.tasks.remove(atOffsets: offsets)
+            }
+        }
+        .navigationDestination(for: Task.self) { task in
+            TaskEditView(task: task)
+                .environmentObject(self.userData)
+        }
+        .navigationBarTitle("Tasks 👀")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                EditButton()
+            }
+        }
     }
-    .navigationBarTitle(Text("Tasks 👀"))
-    .navigationBarItems(trailing: Button(action: { self.isEditing.toggle() }) {
-      if !self.isEditing {
-        Text("Edit")
-      } else {
-        Text("Done").bold()
-      }
-    })
-  }
-
-  private func createTask() {
-    let newTask = Task(title: self.draftTitle, isDone: false)
-    self.userData.tasks.insert(newTask, at: 0)
-    self.draftTitle = ""
-  }
+    
+    private func createTask() {
+        let newTask = Task(title: self.draftTitle, isDone: false)
+        self.userData.tasks.insert(newTask, at: 0)
+        self.draftTitle = ""
+    }
 }

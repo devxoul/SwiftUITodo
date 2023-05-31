@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		031596AE22A5BDBA001BBA1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596AD22A5BDBA001BBA1B /* AppDelegate.swift */; };
-		031596B022A5BDBA001BBA1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596AF22A5BDBA001BBA1B /* SceneDelegate.swift */; };
 		031596B222A5BDBA001BBA1B /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596B122A5BDBA001BBA1B /* TaskListView.swift */; };
 		031596B422A5BDBB001BBA1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031596B322A5BDBB001BBA1B /* Assets.xcassets */; };
 		031596B722A5BDBB001BBA1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031596B622A5BDBB001BBA1B /* Preview Assets.xcassets */; };
@@ -17,13 +15,13 @@
 		031596C822A5C661001BBA1B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596C722A5C661001BBA1B /* UserData.swift */; };
 		031596CA22A5DDE0001BBA1B /* TaskEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596C922A5DDE0001BBA1B /* TaskEditView.swift */; };
 		031596CC22A5F360001BBA1B /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031596CB22A5F360001BBA1B /* TaskItemView.swift */; };
+		6B2F6D7E2A26AEB80040691C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2F6D7D2A26AEB80040691C /* App.swift */; };
+		6B2F6D802A2796800040691C /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2F6D7F2A2796800040691C /* Tasks.swift */; };
 		C8E0A25922A789D100E940E8 /* UserDefaultsValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0A25822A789D100E940E8 /* UserDefaultsValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		031596AA22A5BDBA001BBA1B /* SwiftUITodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		031596AD22A5BDBA001BBA1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		031596AF22A5BDBA001BBA1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		031596B122A5BDBA001BBA1B /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		031596B322A5BDBB001BBA1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		031596B622A5BDBB001BBA1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -33,6 +31,8 @@
 		031596C722A5C661001BBA1B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		031596C922A5DDE0001BBA1B /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditView.swift; sourceTree = "<group>"; };
 		031596CB22A5F360001BBA1B /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
+		6B2F6D7D2A26AEB80040691C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		6B2F6D7F2A2796800040691C /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		C8E0A25822A789D100E940E8 /* UserDefaultsValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,10 +66,10 @@
 		031596AC22A5BDBA001BBA1B /* SwiftUITodo */ = {
 			isa = PBXGroup;
 			children = (
-				031596AD22A5BDBA001BBA1B /* AppDelegate.swift */,
-				031596AF22A5BDBA001BBA1B /* SceneDelegate.swift */,
+				6B2F6D7D2A26AEB80040691C /* App.swift */,
 				031596C722A5C661001BBA1B /* UserData.swift */,
 				031596C122A5BDE8001BBA1B /* Task.swift */,
+				6B2F6D7F2A2796800040691C /* Tasks.swift */,
 				031596B122A5BDBA001BBA1B /* TaskListView.swift */,
 				031596CB22A5F360001BBA1B /* TaskItemView.swift */,
 				031596C922A5DDE0001BBA1B /* TaskEditView.swift */,
@@ -116,8 +116,9 @@
 		031596A222A5BDBA001BBA1B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = "Suyeol Jeon";
 				TargetAttributes = {
 					031596A922A5BDBA001BBA1B = {
@@ -161,12 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B2F6D7E2A26AEB80040691C /* App.swift in Sources */,
 				031596C222A5BDE8001BBA1B /* Task.swift in Sources */,
-				031596AE22A5BDBA001BBA1B /* AppDelegate.swift in Sources */,
 				031596C822A5C661001BBA1B /* UserData.swift in Sources */,
 				031596CC22A5F360001BBA1B /* TaskItemView.swift in Sources */,
+				6B2F6D802A2796800040691C /* Tasks.swift in Sources */,
 				031596CA22A5DDE0001BBA1B /* TaskEditView.swift in Sources */,
-				031596B022A5BDBA001BBA1B /* SceneDelegate.swift in Sources */,
 				C8E0A25922A789D100E940E8 /* UserDefaultsValue.swift in Sources */,
 				031596B222A5BDBA001BBA1B /* TaskListView.swift in Sources */,
 			);
@@ -212,6 +213,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -236,7 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,6 +274,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -290,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -306,14 +309,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "SwiftUITodo/Preview\\ Content";
-				DEVELOPMENT_TEAM = N2C267LBVY;
+				DEVELOPMENT_TEAM = 6Q9LU82ADJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUITodo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.SwiftUITodo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eventbrite.SwiftUITodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,14 +330,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "SwiftUITodo/Preview\\ Content";
-				DEVELOPMENT_TEAM = N2C267LBVY;
+				DEVELOPMENT_TEAM = 6Q9LU82ADJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUITodo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.SwiftUITodo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eventbrite.SwiftUITodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
